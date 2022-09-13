@@ -1,0 +1,16 @@
+services:
+  postgres_db:
+    image: postgres:14-alpine
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: tripadvisor
+      PGDATA: /data/postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/data/postgres
+volumes:
+  db_data:
+    driver: local

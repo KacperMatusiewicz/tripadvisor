@@ -1,0 +1,12 @@
+<div>
+  <div class="hotel-card" *ngFor="let hotel of hotels">
+    <img class="hotel-image" src="https://unsplash.it/500/500"/>
+<!--    <p>{{hotel.id}}</p>-->
+    <div class="hotel-details">
+      <p class="hotel-city">{{hotel.city}}</p>
+      <p class="hotel-name">{{hotel.name}}</p>
+      <p class="hotel-price">{{hotel.price}}</p>
+      <button class="show-more" [routerLink]="['/hotels', hotel.id]" >Learn More!</button>
+    </div>
+  </div>
+</div>
